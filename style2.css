@@ -1,0 +1,166 @@
+/* Global Styles */
+:root {
+    --main-color: #3a6cf4;
+    --hover-color: #061cfc;
+    --background-color: #444; /* Changed to gray */
+    --text-light: #fff;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure full-page gray background */
+body {
+    background: var(--background-color);
+}
+
+/* Header Section (Navbar) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark gray navbar */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Push content down so it doesn't hide under navbar */
+section {
+    padding: 100px 5%;
+    margin-top: 80px; /* Prevents navbar overlap */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    padding-bottom: 25px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+/* Navigation */
+.navigation a {
+    text-decoration: none;
+    color: white; /* Updated for contrast */
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--main-color);
+}
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    background: #222;
+    color: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Skill Cards */
+.skill-card {
+    background: #333;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background: #444;
+}
+
+.skill-card h3 {
+    color: #ffcc00;
+}
+
+/* Main Hero Section */
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url(./background.png) no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Main Heading */
+.main h2 {
+    color: var(--text-light);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.main h3 {
+    color: var(--text-light);
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 10px 0 30px;
+}
+
+.main span {
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Main Button */
+.main-btn {
+    text-decoration: none;
+    color: var(--text-light);
+    background-color: var(--main-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9em 2.2em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+/* Social Icons */
+.main .social-icons a {
+    color: var(--text-light);
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.main .social-icons a:hover {
+    transform: scale(1.2);
+}
